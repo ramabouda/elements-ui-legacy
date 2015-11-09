@@ -27,8 +27,16 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader?presets[]=es2015'
+      }, {
+        test: /\.css$/,
+        loader: ["style", "css"]
+      }, {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass?"]
+      }, {
+        test: /\.sass$/,
+        loaders: ["style", "css", "sass?indentedSyntax=true"]
       },
-      { test: /\.css$/, loader: 'style-loader!css-loader' },
     ]
   },
   plugins: [
@@ -37,5 +45,8 @@ module.exports = {
     }),
     devFlagPlugin,
     new HtmlWebpackPlugin(),
-  ]
+  ],
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, "./app/style")],
+  },
 };

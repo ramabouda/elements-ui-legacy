@@ -1,3 +1,1 @@
-console.log('ssfzefze')
-
-window.a = 1;
+require('./style/base.sass')
