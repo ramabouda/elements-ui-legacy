@@ -28,5 +28,11 @@
     "html-webpack-plugin": "~1.6.2",
     "sass-loader": "~3.1.1",
     "node-sass": "~3.4.1"
+  },
+  "dependencies": {
+    "file-loader": "^0.8.4",
+    "jade": "^1.11.0",
+    "jade-html-loader": "0.0.3",
+    "jade-loader": "^0.8.0"
   }
 }

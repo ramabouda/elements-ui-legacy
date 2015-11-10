@@ -10,3 +10,8 @@ build-prod:
 
 dev-server:
 	env DEBUG=true $(WEBPACK_DEV_SERVER) --hot --inline
+
+clean:
+	rm -rf dist
+
+serve: clean build-dev dev-server
