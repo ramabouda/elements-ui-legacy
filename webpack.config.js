@@ -15,12 +15,15 @@ module.exports = {
   entry: [
     'webpack/hot/dev-server',
     'webpack-dev-server/client?http://localhost:8080',
-    path.resolve(__dirname, 'app/main.js'),
+    path.resolve(__dirname, 'elements/main.js'),
   ],
   output: {
     path: 'dist',
     publicPath: '/',
     filename: 'bundle.js',
+  },
+  resolve: {
+    root: path.resolve(__dirname)
   },
   module: {
     loaders: [
@@ -32,15 +35,24 @@ module.exports = {
       { test: /\.css$/,  loaders: ['style', 'css'] },
       { test: /\.scss$/, loaders: ['style', 'css', 'sass?'] },
       { test: /\.sass$/, loaders: ['style', 'css', 'sass?indentedSyntax=true'] },
-      { test: /\.jade$/, loaders: ['jade'] },
+      { test: /\.jade$/, loaders: ['ngtemplate', 'html', 'jade-html'] },
     ],
   },
   plugins: [
     devFlagPlugin,
     new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'elements/base.html',
+      inject: true,
+    }),
+    new webpack.ProvidePlugin({
+      '_': 'lodash',
+      '$': 'jquery',
+      // gotcha: have the global variable 'angular' in your code if you require a template
+      // 'angular': 'angular',
+    })
   ],
   sassLoader: {
-    includePaths: [path.resolve(__dirname, './app/style')],
+    includePaths: [path.resolve(__dirname, './elements/')],
   },
 };
