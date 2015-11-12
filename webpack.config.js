@@ -12,6 +12,7 @@ var devFlagPlugin = new webpack.DefinePlugin({
 
 
 module.exports = {
+  devtool: 'source-map',
   entry: [
     'webpack/hot/dev-server',
     'webpack-dev-server/client?http://localhost:8080',
@@ -23,7 +24,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   resolve: {
-    root: path.resolve(__dirname)
+    root: path.resolve(__dirname),
   },
   module: {
     loaders: [
@@ -33,8 +34,8 @@ module.exports = {
         loader: 'babel-loader?presets[]=es2015',
       },
       { test: /\.css$/,  loaders: ['style', 'css'] },
-      { test: /\.scss$/, loaders: ['style', 'css', 'sass?'] },
-      { test: /\.sass$/, loaders: ['style', 'css', 'sass?indentedSyntax=true'] },
+      { test: /\.scss$/, loaders: ['style', 'css?sourceMap', 'sass?sourceMap'] },
+      { test: /\.sass$/, loaders: ['style', 'css?sourceMap', 'sass?sourceMap&indentedSyntax=true'] },
       { test: /\.jade$/, loaders: ['ngtemplate', 'html', 'jade-html'] },
     ],
   },
@@ -50,7 +51,7 @@ module.exports = {
       '$': 'jquery',
       // gotcha: have the global variable 'angular' in your code if you require a template
       // 'angular': 'angular',
-    })
+    }),
   ],
   sassLoader: {
     includePaths: [path.resolve(__dirname, './elements/')],
