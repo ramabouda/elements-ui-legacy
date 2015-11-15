@@ -1,19 +1,19 @@
 import angular from 'angular'
 import uirouter from 'angular-ui-router'
 
-import settings from 'elements/settings'
-
 
 angular.module('elements', [
   require('elements/api').__name__,
   require('elements/core/cards/cardlist').__name__,
+  require('elements/core/login').__name__,
   uirouter,
 ])
 
-.config(function($stateProvider, $urlRouterProvider, ApiProvider){
-  ApiProvider.setUrl(settings.apiUrl)
+.config(function($stateProvider, $urlRouterProvider){
 
-  $urlRouterProvider.otherwise('/notFound')
-
+  $urlRouterProvider
+    .when('/', 'login')
+    .when('', 'login')
+    .otherwise('/notFound')
 
 })

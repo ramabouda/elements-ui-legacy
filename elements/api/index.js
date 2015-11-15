@@ -1,7 +1,10 @@
 module.exports = { __name__: 'api' };
 
 import angular from 'angular'
-import restangular from 'restangular'
+import restangular from 'restangular' /* eslint no-unused-vars: 0 */
+
+import settings from 'elements/settings'
+
 
 angular.module(module.exports.__name__, [
   'restangular',
@@ -9,35 +12,48 @@ angular.module(module.exports.__name__, [
 ])
 
 
-.provider('Api', function() {
-  var url = '';
+.service('Api', function(Restangular, NgRestInterceptors) {
+  var root
+  var url
+  var baseUrl;
+  var fields = ['cards', 'auth_token']
+  var token
 
-  return {
-    setUrl: function(_url) {
-      url = _url;
-      return url;
-    },
+  function setToken(_token) {
+    token = _token
+    apiObject.root.setDefaultHeaders({ Authorization: 'JWT ' + token })
+  }
 
-    $get: ['Restangular', 'NgRestInterceptors', function(Restangular, NgRestInterceptors) {
-      var root;
-      var baseUrl;
+  function setUrl(_url) {
+    url = _url;
+    root.setBaseUrl(url)
+    baseUrl = apiObject.root.one('/').getRequestedUrl();
+  }
 
-      root = Restangular.withConfig(function(instance) {
-        instance
-          .setResponseInterceptor(NgRestInterceptors.objectToList)
-          .setBaseUrl(url)
-          .setRequestSuffix('/')
-          .setDefaultHttpFields({cache: false})
-      });
-      root.addElementTransformer('cards', true, NgRestInterceptors.defaultPaginationTransformer);
-      baseUrl = root.one('/').getRequestedUrl();
+  // Config
+  root = Restangular.withConfig(function(instance) {
+    instance
+      .setResponseInterceptor(NgRestInterceptors.objectToList)
+      .setBaseUrl(url)
+      .setRequestSuffix('/')
+      .setDefaultHttpFields({ cache: false })
+  });
 
-      return {
-        root: root,
-        baseUrl: baseUrl,
 
-        cards: root.all('cards'),
-      };
-    }],
-  };
-});
+  var apiObject = {
+    root: root,
+    baseUrl: baseUrl,
+    setToken: setToken,
+    setUrl: setUrl,
+  }
+
+  setUrl(settings.apiUrl)
+
+  // Define fields
+  _.each(fields, function(field){
+    root.addElementTransformer(field, true, NgRestInterceptors.defaultPaginationTransformer);
+    apiObject[field] = root.all(field)
+  })
+
+  return apiObject
+})

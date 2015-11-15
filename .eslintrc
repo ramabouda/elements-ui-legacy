@@ -5,6 +5,9 @@ env:
   node: true
   phantomjs: true
   es6: true
+globals:
+  _: false,
+  $: false,
 ecmaFeatures:
   modules: true
 rules:
@@ -14,7 +17,7 @@ rules:
   no-shadow: 2
   no-shadow-restricted-names: 2
   no-unused-vars: 2
-  no-use-before-define: 2
+  no-use-before-define: 0
   comma-dangle:
   - 1
   - always-multiline
