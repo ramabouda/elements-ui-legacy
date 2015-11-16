@@ -12,7 +12,7 @@ angular.module(module.exports.__name__, [
 ])
 
 
-.service('Api', function(Restangular, NgRestInterceptors) {
+.service('Api', function($cookies, Restangular, NgRestInterceptors) {
   var root
   var url
   var baseUrl;
@@ -22,12 +22,17 @@ angular.module(module.exports.__name__, [
   function setToken(_token) {
     token = _token
     apiObject.root.setDefaultHeaders({ Authorization: 'JWT ' + token })
+    $cookies.put('elements_auth_token', token)
   }
 
   function setUrl(_url) {
     url = _url;
     root.setBaseUrl(url)
     baseUrl = apiObject.root.one('/').getRequestedUrl();
+  }
+
+  function isAuthenticated(){
+    return !!$cookies.get('elements_auth_token')
   }
 
   // Config
@@ -45,9 +50,13 @@ angular.module(module.exports.__name__, [
     baseUrl: baseUrl,
     setToken: setToken,
     setUrl: setUrl,
+    isAuthenticated: isAuthenticated,
   }
 
   setUrl(settings.apiUrl)
+  if (isAuthenticated()) {
+    setToken($cookies.get('elements_auth_token'))
+  }
 
   // Define fields
   _.each(fields, function(field){

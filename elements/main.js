@@ -1,5 +1,6 @@
 import angular from 'angular'
 import uirouter from 'angular-ui-router'
+import ngCookies from 'angular-cookies'
 
 
 angular.module('elements', [
@@ -7,6 +8,7 @@ angular.module('elements', [
   require('elements/core/cards/cardlist').__name__,
   require('elements/core/login').__name__,
   uirouter,
+  ngCookies,
 ])
 
 .config(function($stateProvider, $urlRouterProvider){
@@ -16,4 +18,16 @@ angular.module('elements', [
     .when('', 'login')
     .otherwise('/notFound')
 
+})
+
+.run(function($rootScope, $log, $state, Api){
+  $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
+    $log.debug('> [stateChangeStart]', toState.name, toParams);
+
+    if (toState.name !== 'login' && !Api.isAuthenticated()) {
+      event.preventDefault()  // Cancel previous state
+      $state.go('login')
+      return
+    }
+  })
 })
