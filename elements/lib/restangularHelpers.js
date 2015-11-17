@@ -52,7 +52,7 @@ angular.module(module.exports.__name__, [])
   };
 }])
 
-.factory('NgRestInterceptors', ['NgRestHelpers', function(NgRestHelpers) {
+.factory('NgRestInterceptors', function($injector, $state, NgRestHelpers) {
 
   function paginationInterceptor(endpoint) {
     /* Recursively get paginated endpoints, with a limit.
@@ -110,9 +110,18 @@ angular.module(module.exports.__name__, [])
     return answer;
   }
 
+  function errorInterceptor(response) {
+    if (response.status === 401) {
+      $state.go('login')
+      return false; // error handled
+    }
+    return true; // error not handled
+  }
+
   return {
     objectToList: objectToListInterceptor,
     pagination: paginationInterceptor,
     defaultPaginationTransformer: defaultPaginationTransformer,
+    errorInterceptor: errorInterceptor,
   };
-}]);
+});

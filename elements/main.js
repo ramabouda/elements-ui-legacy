@@ -14,20 +14,14 @@ angular.module('elements', [
 .config(function($stateProvider, $urlRouterProvider){
 
   $urlRouterProvider
-    .when('/', 'login')
-    .when('', 'login')
+    .when('/', 'cards')
+    .when('', 'cards')
     .otherwise('/notFound')
 
 })
 
-.run(function($rootScope, $log, $state, Api){
+.run(function($rootScope, $log){
   $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
     $log.debug('> [stateChangeStart]', toState.name, toParams);
-
-    if (toState.name !== 'login' && !Api.isAuthenticated()) {
-      event.preventDefault()  // Cancel previous state
-      $state.go('login')
-      return
-    }
   })
 })

@@ -9,30 +9,24 @@ import settings from 'elements/settings'
 angular.module(module.exports.__name__, [
   'restangular',
   require('elements/lib/restangularHelpers').__name__,
+  require('elements/core/login').__name__,
 ])
 
 
-.service('Api', function($cookies, Restangular, NgRestInterceptors) {
+.service('Api', function(Restangular, NgRestInterceptors) {
   var root
   var url
   var baseUrl;
-  var fields = ['cards', 'auth_token']
-  var token
-
-  function setToken(_token) {
-    token = _token
-    apiObject.root.setDefaultHeaders({ Authorization: 'JWT ' + token })
-    $cookies.put('elements_auth_token', token)
-  }
+  var fields = [
+    'cards',
+    'auth_token',
+    'auth_token_refresh',
+  ]
 
   function setUrl(_url) {
     url = _url;
     root.setBaseUrl(url)
     baseUrl = apiObject.root.one('/').getRequestedUrl();
-  }
-
-  function isAuthenticated(){
-    return !!$cookies.get('elements_auth_token')
   }
 
   // Config
@@ -42,21 +36,18 @@ angular.module(module.exports.__name__, [
       .setBaseUrl(url)
       .setRequestSuffix('/')
       .setDefaultHttpFields({ cache: false })
+      .setErrorInterceptor(NgRestInterceptors.errorInterceptor);
   });
 
 
   var apiObject = {
     root: root,
+    token: '',
     baseUrl: baseUrl,
-    setToken: setToken,
     setUrl: setUrl,
-    isAuthenticated: isAuthenticated,
   }
 
   setUrl(settings.apiUrl)
-  if (isAuthenticated()) {
-    setToken($cookies.get('elements_auth_token'))
-  }
 
   // Define fields
   _.each(fields, function(field){
