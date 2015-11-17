@@ -37,6 +37,26 @@ angular.module(module.exports.__name__, [
     myModule.tokenData = jwtDecode(_token)
     Api.root.setDefaultHeaders({ Authorization: 'JWT ' + myModule.token })
     $cookies.put('elements_auth_token', myModule.token)
+    // Schedule refresh
+    setTimeout(
+      refreshToken,
+      getTimeBeforeRefresh()
+    )
+  }
+
+  // TODO manage the refresh
+  // TODO fix infinite loop on refresh
+
+  function getTimeBeforeRefresh(){
+    var halfRefresh = Math.round((myModule.tokenData.exp - myModule.tokenData.orig_iat) / 2)
+    var refreshTimestamp = myModule.tokenData.orig_iat + halfRefresh
+    return Math.max(0, refreshTimestamp * 1000 - Date.now())
+  }
+
+  function refreshToken(){
+    return Api.auth_token_refresh.post({token: myModule.token}).then(
+      (data) => setToken(data.token)
+    )
   }
 
   function isAuthenticated(){
@@ -47,6 +67,7 @@ angular.module(module.exports.__name__, [
     token: '',
     tokenData: {},
     setToken: setToken,
+    refreshToken: refreshToken,
     isAuthenticated: isAuthenticated,
   }
 
