@@ -1,2 +1,13 @@
-div(ng-repeat='card in cards track by card.id')
-  {{ card.name }}
+
+div.cardlist
+  div.card(
+    data-card-id='{{ card.id }}'
+    ng-repeat='card in cards track by card.id'
+    class='{{ card.elements.join(' ') }}'
+  )
+    div.name {{ card.name }}
+    div.cost {{ card.cost }}
+    div.picture
+    div.kind {{ card.kind }}
+    div.rarity {{ card.rarity }}
+    div.text blah blah blah blah blah blah dfqsef qsf qsef  sqfqs eq
