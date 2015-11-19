@@ -1,3 +1,7 @@
+@import core/common/style/colors
+@import core/common/style/maps
+
+
 body
   background: lightgrey
 
@@ -13,8 +17,15 @@ $card_border_radius: 12px
   z-index: 10
   border: 2px solid black
   border-radius: $card_border_radius
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+  //box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
   overflow: hidden
+
+  // Color background
+  @each $_name, $_value in $element_colors
+    &.#{$_name}
+      @extend .#{$_name}_bg
+      @extend .#{$_name}_border
+      box-shadow: 0 0 10px rgba($_value, 0.5)
 
   & > div
     background: lightgrey
@@ -29,6 +40,7 @@ $card_border_radius: 12px
     width: 100%
     height: 40%
     border-radius: 0 0 $card_border_radius $card_border_radius
+    padding: 4px
   .rarity
     z-index: 10
     bottom: 0
@@ -41,7 +53,9 @@ $card_border_radius: 12px
     z-index: 10
     width: 100%
     border-radius: $card_border_radius $card_border_radius 0 0
-    height: 10%
+    padding: 5px 0 5px 10px
+    background: rgba(white, 0.6)
+    font-weight: bold
   .kind
     z-index: 10
     height: 10%

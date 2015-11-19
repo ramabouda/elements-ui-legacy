@@ -3,7 +3,7 @@ div.cardlist
   div.card(
     data-card-id='{{ card.id }}'
     ng-repeat='card in cards track by card.id'
-    class='{{ card.elements.join(' ') }}'
+    class='{{ card.elements.join(" ") }}'
   )
     div.name {{ card.name }}
     div.cost {{ card.cost }}

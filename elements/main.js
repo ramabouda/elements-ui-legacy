@@ -2,6 +2,7 @@ import angular from 'angular'
 import uirouter from 'angular-ui-router'
 import ngCookies from 'angular-cookies'
 
+import commonCss from 'elements/core/common/style/common.sass'
 
 angular.module('elements', [
   require('elements/api').__name__,

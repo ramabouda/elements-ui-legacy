@@ -1,0 +1,16 @@
+@import maps
+
+
+$default-text-color: #1F1F1F
+
+@each $_name, $_value in $element_colors
+  .#{$_name}_bg
+    background-color: $_value
+  .#{$_name}_fg
+    color: $_value
+  .#{$_name}_border
+    border-color: darken($_value, 10%)
+
+.AIR_bg
+  color: $default-text-color
+
