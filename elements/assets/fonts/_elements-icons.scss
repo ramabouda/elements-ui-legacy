@@ -1,0 +1,136 @@
+//
+// Icon Font: elements-icons
+//
+
+@font-face {
+  font-family: "elements-icons";
+  src: url("/elements/assets/fonts/elements-icons.eot");
+  src: url("/elements/assets/fonts/elements-icons.eot?#iefix") format("embedded-opentype"),
+       url("/elements/assets/fonts/elements-icons.woff") format("woff"),
+       url("/elements/assets/fonts/elements-icons.ttf") format("truetype"),
+       url("/elements/assets/fonts/elements-icons.svg#elements-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "elements-icons";
+    src: url("/elements/assets/fonts/elements-icons.svg#elements-icons") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.eli-WATER1:before,
+.eli-blade1:before,
+.eli-blood10:before,
+.eli-burn7:before,
+.eli-cross6:before,
+.eli-electricity23:before,
+.eli-energy28:before,
+.eli-fire:before,
+.eli-flame1:before,
+.eli-flames8:before,
+.eli-helmet1:before,
+.eli-lightning24:before,
+.eli-mountain45:before,
+.eli-power135:before,
+.eli-relax6:before,
+.eli-rock8:before,
+.eli-security48:before,
+.eli-shield3:before,
+.eli-shield33:before,
+.eli-shield84:before,
+.eli-spa16:before,
+.eli-spa21:before,
+.eli-swords8:before,
+.eli-water2:before,
+.eli-water3:before,
+.eli-waves7:before,
+.eli-weapon32:before,
+.eli-wind2:before,
+.eli-winds4:before,
+.eli-windy9:before,
+.eli-zen2:before,
+.eli-zen3:before {
+  display: inline-block;
+  font-family: "elements-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.eli-WATER1:before { content: "\f123"; }
+.eli-blade1:before { content: "\f100"; }
+.eli-blood10:before { content: "\f101"; }
+.eli-burn7:before { content: "\f102"; }
+.eli-cross6:before { content: "\f103"; }
+.eli-electricity23:before { content: "\f105"; }
+.eli-energy28:before { content: "\f106"; }
+.eli-fire:before { content: "\f107"; }
+.eli-flame1:before { content: "\f108"; }
+.eli-flames8:before { content: "\f109"; }
+.eli-helmet1:before { content: "\f10a"; }
+.eli-lightning24:before { content: "\f10b"; }
+.eli-mountain45:before { content: "\f10c"; }
+.eli-power135:before { content: "\f10d"; }
+.eli-relax6:before { content: "\f10e"; }
+.eli-rock8:before { content: "\f10f"; }
+.eli-security48:before { content: "\f110"; }
+.eli-shield3:before { content: "\f111"; }
+.eli-shield33:before { content: "\f112"; }
+.eli-shield84:before { content: "\f113"; }
+.eli-spa16:before { content: "\f114"; }
+.eli-spa21:before { content: "\f115"; }
+.eli-swords8:before { content: "\f116"; }
+.eli-water2:before { content: "\f121"; }
+.eli-water3:before { content: "\f122"; }
+.eli-waves7:before { content: "\f119"; }
+.eli-weapon32:before { content: "\f11a"; }
+.eli-wind2:before { content: "\f11b"; }
+.eli-winds4:before { content: "\f11c"; }
+.eli-windy9:before { content: "\f11d"; }
+.eli-zen2:before { content: "\f11e"; }
+.eli-zen3:before { content: "\f11f"; }
+
+$font-elements-icons-WATER1: "\f123";
+$font-elements-icons-blade1: "\f100";
+$font-elements-icons-blood10: "\f101";
+$font-elements-icons-burn7: "\f102";
+$font-elements-icons-cross6: "\f103";
+$font-elements-icons-electricity23: "\f105";
+$font-elements-icons-energy28: "\f106";
+$font-elements-icons-fire: "\f107";
+$font-elements-icons-flame1: "\f108";
+$font-elements-icons-flames8: "\f109";
+$font-elements-icons-helmet1: "\f10a";
+$font-elements-icons-lightning24: "\f10b";
+$font-elements-icons-mountain45: "\f10c";
+$font-elements-icons-power135: "\f10d";
+$font-elements-icons-relax6: "\f10e";
+$font-elements-icons-rock8: "\f10f";
+$font-elements-icons-security48: "\f110";
+$font-elements-icons-shield3: "\f111";
+$font-elements-icons-shield33: "\f112";
+$font-elements-icons-shield84: "\f113";
+$font-elements-icons-spa16: "\f114";
+$font-elements-icons-spa21: "\f115";
+$font-elements-icons-swords8: "\f116";
+$font-elements-icons-water2: "\f121";
+$font-elements-icons-water3: "\f122";
+$font-elements-icons-waves7: "\f119";
+$font-elements-icons-weapon32: "\f11a";
+$font-elements-icons-wind2: "\f11b";
+$font-elements-icons-winds4: "\f11c";
+$font-elements-icons-windy9: "\f11d";
+$font-elements-icons-zen2: "\f11e";
+$font-elements-icons-zen3: "\f11f";

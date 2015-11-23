@@ -1,0 +1,13 @@
+
+div(
+    ng-repeat='deck in decks track by deck.id'
+)
+  {{ deck.name }}
+
+  p Heroes
+  ul
+    li(ng-repeat='hero_id in deck.heroes') {{ hero_id }}
+
+  p Cards
+  ul
+    li(ng-repeat='card in deck.cards') {{ card.id }}

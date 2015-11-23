@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>elements-icons glyphs preview</title>
+
+    <style>
+      /* Page Styles */
+
+      * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: #fff;
+        color: #444;
+        font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+
+      a,
+      a:visited {
+        color: #888;
+        text-decoration: underline;
+      }
+      a:hover,
+      a:focus { color: #000; }
+
+      header {
+        border-bottom: 2px solid #ddd;
+        margin-bottom: 20px;
+        overflow: hidden;
+        padding: 20px 0;
+      }
+
+      header h1 {
+        color: #888;
+        float: left;
+        font-size: 36px;
+        font-weight: 300;
+      }
+
+      header a {
+        float: right;
+        font-size: 14px;
+      }
+
+      .container {
+        margin: 0 auto;
+        max-width: 1200px;
+        min-width: 960px;
+        padding: 0 40px;
+        width: 90%;
+      }
+
+      .glyph {
+        border-bottom: 1px dotted #ccc;
+        padding: 10px 0 20px;
+        margin-bottom: 20px;
+      }
+
+      .preview-glyphs { vertical-align: bottom; }
+
+      .preview-scale {
+        color: #888;
+        font-size: 12px;
+        margin-top: 5px;
+      }
+
+      .step {
+        display: inline-block;
+        line-height: 1;
+        position: relative;
+        width: 10%;
+      }
+
+      .step .letters,
+      .step i {
+        -webkit-transition: opacity .3s;
+        -moz-transition: opacity .3s;
+        -ms-transition: opacity .3s;
+        -o-transition: opacity .3s;
+        transition: opacity .3s;
+      }
+
+      .step:hover .letters { opacity: 1; }
+      .step:hover i { opacity: .3; }
+
+      .letters {
+        opacity: .3;
+        position: absolute;
+      }
+
+      .characters-off .letters { display: none; }
+      .characters-off .step:hover i { opacity: 1; }
+
+      
+      .size-12 { font-size: 12px; }
+      
+      .size-14 { font-size: 14px; }
+      
+      .size-16 { font-size: 16px; }
+      
+      .size-18 { font-size: 18px; }
+      
+      .size-21 { font-size: 21px; }
+      
+      .size-24 { font-size: 24px; }
+      
+      .size-36 { font-size: 36px; }
+      
+      .size-48 { font-size: 48px; }
+      
+      .size-60 { font-size: 60px; }
+      
+      .size-72 { font-size: 72px; }
+      
+
+      .usage { margin-top: 10px; }
+
+      .usage input {
+        font-family: monospace;
+        margin-right: 3px;
+        padding: 2px 5px;
+        text-align: center;
+      }
+
+      .usage .point { width: 150px; }
+
+      .usage .class { width: 250px; }
+
+      footer {
+        color: #888;
+        font-size: 12px;
+        padding: 20px 0;
+      }
+
+      /* Icon Font: elements-icons */
+
+      @font-face {
+  font-family: "elements-icons";
+  src: url("./elements-icons.eot");
+  src: url("./elements-icons.eot?#iefix") format("embedded-opentype"),
+       url("./elements-icons.woff") format("woff"),
+       url("./elements-icons.ttf") format("truetype"),
+       url("./elements-icons.svg#elements-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "elements-icons";
+    src: url("./elements-icons.svg#elements-icons") format("svg");
+  }
+}
+
+      [data-icon]:before { content: attr(data-icon); }
+
+      [data-icon]:before,
+      .eli-WATER1:before,
+.eli-blade1:before,
+.eli-blood10:before,
+.eli-burn7:before,
+.eli-cross6:before,
+.eli-electricity23:before,
+.eli-energy28:before,
+.eli-fire:before,
+.eli-flame1:before,
+.eli-flames8:before,
+.eli-helmet1:before,
+.eli-lightning24:before,
+.eli-mountain45:before,
+.eli-power135:before,
+.eli-relax6:before,
+.eli-rock8:before,
+.eli-security48:before,
+.eli-shield3:before,
+.eli-shield33:before,
+.eli-shield84:before,
+.eli-spa16:before,
+.eli-spa21:before,
+.eli-swords8:before,
+.eli-water2:before,
+.eli-water3:before,
+.eli-waves7:before,
+.eli-weapon32:before,
+.eli-wind2:before,
+.eli-winds4:before,
+.eli-windy9:before,
+.eli-zen2:before,
+.eli-zen3:before {
+        display: inline-block;
+  font-family: "elements-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+      }
+
+      .eli-WATER1:before { content: "\f123"; }
+.eli-blade1:before { content: "\f100"; }
+.eli-blood10:before { content: "\f101"; }
+.eli-burn7:before { content: "\f102"; }
+.eli-cross6:before { content: "\f103"; }
+.eli-electricity23:before { content: "\f105"; }
+.eli-energy28:before { content: "\f106"; }
+.eli-fire:before { content: "\f107"; }
+.eli-flame1:before { content: "\f108"; }
+.eli-flames8:before { content: "\f109"; }
+.eli-helmet1:before { content: "\f10a"; }
+.eli-lightning24:before { content: "\f10b"; }
+.eli-mountain45:before { content: "\f10c"; }
+.eli-power135:before { content: "\f10d"; }
+.eli-relax6:before { content: "\f10e"; }
+.eli-rock8:before { content: "\f10f"; }
+.eli-security48:before { content: "\f110"; }
+.eli-shield3:before { content: "\f111"; }
+.eli-shield33:before { content: "\f112"; }
+.eli-shield84:before { content: "\f113"; }
+.eli-spa16:before { content: "\f114"; }
+.eli-spa21:before { content: "\f115"; }
+.eli-swords8:before { content: "\f116"; }
+.eli-water2:before { content: "\f121"; }
+.eli-water3:before { content: "\f122"; }
+.eli-waves7:before { content: "\f119"; }
+.eli-weapon32:before { content: "\f11a"; }
+.eli-wind2:before { content: "\f11b"; }
+.eli-winds4:before { content: "\f11c"; }
+.eli-windy9:before { content: "\f11d"; }
+.eli-zen2:before { content: "\f11e"; }
+.eli-zen3:before { content: "\f11f"; }
+    </style>
+
+    <!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <script>
+      function toggleCharacters() {
+        var body = document.getElementsByTagName('body')[0];
+        body.className = body.className === 'characters-off' ? '' : 'characters-off';
+      }
+    </script>
+  </head>
+
+  <body class="characters-off">
+    <div id="page" class="container">
+      <header>
+        <h1>elements-icons contains 32 glyphs:</h1>
+        <a onclick="toggleCharacters(); return false;" href="#">Toggle Preview Characters</a>
+      </header>
+
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-WATER1" class="eli-WATER1"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-WATER1" class="eli-WATER1"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-WATER1" class="eli-WATER1"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-WATER1" class="eli-WATER1"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-WATER1" class="eli-WATER1"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-WATER1" class="eli-WATER1"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-WATER1" class="eli-WATER1"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-WATER1" class="eli-WATER1"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-WATER1" class="eli-WATER1"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-WATER1" class="eli-WATER1"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-WATER1" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf123;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-blade1" class="eli-blade1"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-blade1" class="eli-blade1"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-blade1" class="eli-blade1"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-blade1" class="eli-blade1"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-blade1" class="eli-blade1"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-blade1" class="eli-blade1"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-blade1" class="eli-blade1"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-blade1" class="eli-blade1"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-blade1" class="eli-blade1"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-blade1" class="eli-blade1"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-blade1" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf100;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-blood10" class="eli-blood10"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-blood10" class="eli-blood10"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-blood10" class="eli-blood10"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-blood10" class="eli-blood10"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-blood10" class="eli-blood10"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-blood10" class="eli-blood10"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-blood10" class="eli-blood10"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-blood10" class="eli-blood10"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-blood10" class="eli-blood10"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-blood10" class="eli-blood10"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-blood10" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf101;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-burn7" class="eli-burn7"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-burn7" class="eli-burn7"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-burn7" class="eli-burn7"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-burn7" class="eli-burn7"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-burn7" class="eli-burn7"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-burn7" class="eli-burn7"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-burn7" class="eli-burn7"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-burn7" class="eli-burn7"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-burn7" class="eli-burn7"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-burn7" class="eli-burn7"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-burn7" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf102;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-cross6" class="eli-cross6"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-cross6" class="eli-cross6"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-cross6" class="eli-cross6"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-cross6" class="eli-cross6"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-cross6" class="eli-cross6"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-cross6" class="eli-cross6"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-cross6" class="eli-cross6"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-cross6" class="eli-cross6"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-cross6" class="eli-cross6"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-cross6" class="eli-cross6"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-cross6" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf103;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-electricity23" class="eli-electricity23"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-electricity23" class="eli-electricity23"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-electricity23" class="eli-electricity23"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-electricity23" class="eli-electricity23"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-electricity23" class="eli-electricity23"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-electricity23" class="eli-electricity23"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-electricity23" class="eli-electricity23"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-electricity23" class="eli-electricity23"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-electricity23" class="eli-electricity23"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-electricity23" class="eli-electricity23"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-electricity23" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf105;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-energy28" class="eli-energy28"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-energy28" class="eli-energy28"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-energy28" class="eli-energy28"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-energy28" class="eli-energy28"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-energy28" class="eli-energy28"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-energy28" class="eli-energy28"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-energy28" class="eli-energy28"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-energy28" class="eli-energy28"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-energy28" class="eli-energy28"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-energy28" class="eli-energy28"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-energy28" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf106;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-fire" class="eli-fire"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-fire" class="eli-fire"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-fire" class="eli-fire"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-fire" class="eli-fire"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-fire" class="eli-fire"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-fire" class="eli-fire"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-fire" class="eli-fire"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-fire" class="eli-fire"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-fire" class="eli-fire"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-fire" class="eli-fire"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-fire" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf107;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-flame1" class="eli-flame1"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-flame1" class="eli-flame1"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-flame1" class="eli-flame1"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-flame1" class="eli-flame1"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-flame1" class="eli-flame1"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-flame1" class="eli-flame1"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-flame1" class="eli-flame1"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-flame1" class="eli-flame1"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-flame1" class="eli-flame1"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-flame1" class="eli-flame1"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-flame1" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf108;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-flames8" class="eli-flames8"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-flames8" class="eli-flames8"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-flames8" class="eli-flames8"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-flames8" class="eli-flames8"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-flames8" class="eli-flames8"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-flames8" class="eli-flames8"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-flames8" class="eli-flames8"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-flames8" class="eli-flames8"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-flames8" class="eli-flames8"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-flames8" class="eli-flames8"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-flames8" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf109;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-helmet1" class="eli-helmet1"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-helmet1" class="eli-helmet1"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-helmet1" class="eli-helmet1"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-helmet1" class="eli-helmet1"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-helmet1" class="eli-helmet1"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-helmet1" class="eli-helmet1"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-helmet1" class="eli-helmet1"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-helmet1" class="eli-helmet1"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-helmet1" class="eli-helmet1"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-helmet1" class="eli-helmet1"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-helmet1" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10a;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-lightning24" class="eli-lightning24"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-lightning24" class="eli-lightning24"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-lightning24" class="eli-lightning24"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-lightning24" class="eli-lightning24"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-lightning24" class="eli-lightning24"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-lightning24" class="eli-lightning24"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-lightning24" class="eli-lightning24"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-lightning24" class="eli-lightning24"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-lightning24" class="eli-lightning24"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-lightning24" class="eli-lightning24"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-lightning24" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10b;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-mountain45" class="eli-mountain45"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-mountain45" class="eli-mountain45"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-mountain45" class="eli-mountain45"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-mountain45" class="eli-mountain45"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-mountain45" class="eli-mountain45"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-mountain45" class="eli-mountain45"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-mountain45" class="eli-mountain45"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-mountain45" class="eli-mountain45"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-mountain45" class="eli-mountain45"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-mountain45" class="eli-mountain45"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-mountain45" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10c;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-power135" class="eli-power135"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-power135" class="eli-power135"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-power135" class="eli-power135"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-power135" class="eli-power135"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-power135" class="eli-power135"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-power135" class="eli-power135"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-power135" class="eli-power135"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-power135" class="eli-power135"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-power135" class="eli-power135"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-power135" class="eli-power135"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-power135" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10d;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-relax6" class="eli-relax6"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-relax6" class="eli-relax6"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-relax6" class="eli-relax6"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-relax6" class="eli-relax6"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-relax6" class="eli-relax6"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-relax6" class="eli-relax6"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-relax6" class="eli-relax6"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-relax6" class="eli-relax6"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-relax6" class="eli-relax6"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-relax6" class="eli-relax6"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-relax6" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10e;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-rock8" class="eli-rock8"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-rock8" class="eli-rock8"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-rock8" class="eli-rock8"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-rock8" class="eli-rock8"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-rock8" class="eli-rock8"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-rock8" class="eli-rock8"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-rock8" class="eli-rock8"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-rock8" class="eli-rock8"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-rock8" class="eli-rock8"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-rock8" class="eli-rock8"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-rock8" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10f;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-security48" class="eli-security48"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-security48" class="eli-security48"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-security48" class="eli-security48"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-security48" class="eli-security48"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-security48" class="eli-security48"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-security48" class="eli-security48"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-security48" class="eli-security48"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-security48" class="eli-security48"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-security48" class="eli-security48"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-security48" class="eli-security48"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-security48" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf110;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-shield3" class="eli-shield3"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-shield3" class="eli-shield3"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-shield3" class="eli-shield3"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-shield3" class="eli-shield3"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-shield3" class="eli-shield3"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-shield3" class="eli-shield3"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-shield3" class="eli-shield3"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-shield3" class="eli-shield3"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-shield3" class="eli-shield3"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-shield3" class="eli-shield3"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-shield3" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf111;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-shield33" class="eli-shield33"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-shield33" class="eli-shield33"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-shield33" class="eli-shield33"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-shield33" class="eli-shield33"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-shield33" class="eli-shield33"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-shield33" class="eli-shield33"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-shield33" class="eli-shield33"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-shield33" class="eli-shield33"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-shield33" class="eli-shield33"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-shield33" class="eli-shield33"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-shield33" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf112;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-shield84" class="eli-shield84"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-shield84" class="eli-shield84"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-shield84" class="eli-shield84"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-shield84" class="eli-shield84"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-shield84" class="eli-shield84"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-shield84" class="eli-shield84"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-shield84" class="eli-shield84"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-shield84" class="eli-shield84"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-shield84" class="eli-shield84"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-shield84" class="eli-shield84"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-shield84" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf113;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-spa16" class="eli-spa16"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-spa16" class="eli-spa16"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-spa16" class="eli-spa16"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-spa16" class="eli-spa16"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-spa16" class="eli-spa16"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-spa16" class="eli-spa16"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-spa16" class="eli-spa16"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-spa16" class="eli-spa16"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-spa16" class="eli-spa16"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-spa16" class="eli-spa16"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-spa16" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf114;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-spa21" class="eli-spa21"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-spa21" class="eli-spa21"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-spa21" class="eli-spa21"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-spa21" class="eli-spa21"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-spa21" class="eli-spa21"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-spa21" class="eli-spa21"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-spa21" class="eli-spa21"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-spa21" class="eli-spa21"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-spa21" class="eli-spa21"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-spa21" class="eli-spa21"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-spa21" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf115;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-swords8" class="eli-swords8"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-swords8" class="eli-swords8"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-swords8" class="eli-swords8"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-swords8" class="eli-swords8"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-swords8" class="eli-swords8"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-swords8" class="eli-swords8"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-swords8" class="eli-swords8"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-swords8" class="eli-swords8"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-swords8" class="eli-swords8"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-swords8" class="eli-swords8"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-swords8" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf116;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-water2" class="eli-water2"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-water2" class="eli-water2"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-water2" class="eli-water2"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-water2" class="eli-water2"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-water2" class="eli-water2"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-water2" class="eli-water2"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-water2" class="eli-water2"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-water2" class="eli-water2"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-water2" class="eli-water2"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-water2" class="eli-water2"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-water2" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf121;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-water3" class="eli-water3"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-water3" class="eli-water3"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-water3" class="eli-water3"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-water3" class="eli-water3"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-water3" class="eli-water3"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-water3" class="eli-water3"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-water3" class="eli-water3"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-water3" class="eli-water3"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-water3" class="eli-water3"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-water3" class="eli-water3"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-water3" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf122;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-waves7" class="eli-waves7"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-waves7" class="eli-waves7"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-waves7" class="eli-waves7"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-waves7" class="eli-waves7"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-waves7" class="eli-waves7"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-waves7" class="eli-waves7"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-waves7" class="eli-waves7"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-waves7" class="eli-waves7"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-waves7" class="eli-waves7"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-waves7" class="eli-waves7"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-waves7" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf119;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-weapon32" class="eli-weapon32"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-weapon32" class="eli-weapon32"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-weapon32" class="eli-weapon32"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-weapon32" class="eli-weapon32"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-weapon32" class="eli-weapon32"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-weapon32" class="eli-weapon32"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-weapon32" class="eli-weapon32"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-weapon32" class="eli-weapon32"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-weapon32" class="eli-weapon32"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-weapon32" class="eli-weapon32"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-weapon32" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf11a;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-wind2" class="eli-wind2"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-wind2" class="eli-wind2"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-wind2" class="eli-wind2"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-wind2" class="eli-wind2"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-wind2" class="eli-wind2"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-wind2" class="eli-wind2"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-wind2" class="eli-wind2"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-wind2" class="eli-wind2"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-wind2" class="eli-wind2"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-wind2" class="eli-wind2"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-wind2" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf11b;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-winds4" class="eli-winds4"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-winds4" class="eli-winds4"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-winds4" class="eli-winds4"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-winds4" class="eli-winds4"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-winds4" class="eli-winds4"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-winds4" class="eli-winds4"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-winds4" class="eli-winds4"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-winds4" class="eli-winds4"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-winds4" class="eli-winds4"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-winds4" class="eli-winds4"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-winds4" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf11c;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-windy9" class="eli-windy9"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-windy9" class="eli-windy9"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-windy9" class="eli-windy9"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-windy9" class="eli-windy9"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-windy9" class="eli-windy9"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-windy9" class="eli-windy9"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-windy9" class="eli-windy9"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-windy9" class="eli-windy9"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-windy9" class="eli-windy9"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-windy9" class="eli-windy9"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-windy9" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf11d;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-zen2" class="eli-zen2"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-zen2" class="eli-zen2"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-zen2" class="eli-zen2"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-zen2" class="eli-zen2"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-zen2" class="eli-zen2"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-zen2" class="eli-zen2"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-zen2" class="eli-zen2"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-zen2" class="eli-zen2"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-zen2" class="eli-zen2"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-zen2" class="eli-zen2"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-zen2" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf11e;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="eli-zen3" class="eli-zen3"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="eli-zen3" class="eli-zen3"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="eli-zen3" class="eli-zen3"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="eli-zen3" class="eli-zen3"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="eli-zen3" class="eli-zen3"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="eli-zen3" class="eli-zen3"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="eli-zen3" class="eli-zen3"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="eli-zen3" class="eli-zen3"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="eli-zen3" class="eli-zen3"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="eli-zen3" class="eli-zen3"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".eli-zen3" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf11f;" />
+        </div>
+      </div>
+      
+
+      <footer>
+        Made with love using <a href="http://fontcustom.com">Font Custom</a>.
+      </footer>
+    </div>
+  </body>
+</html>
