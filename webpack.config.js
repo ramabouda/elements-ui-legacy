@@ -1,4 +1,3 @@
-'use strict'
 var path = require('path');
 
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
@@ -57,10 +56,4 @@ module.exports = {
       // 'angular': 'angular',
     }),
   ],
-  sassLoader: {
-    // paths for @import declarations
-    includePaths: [
-      path.resolve(__dirname, './elements/'),
-    ],
-  },
 };
