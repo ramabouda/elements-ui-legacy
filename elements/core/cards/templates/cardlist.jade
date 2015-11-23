@@ -6,7 +6,9 @@ div.cardlist
     class='{{ card.elements.join(" ") }}'
   )
     div.name {{ card.name }}
-    div.cost {{ card.cost }}
+    div.cost
+      span(ng-repeat='cost in card.cost') {{ cost.quantity }}
+        i(class='eli-{{ cost.energy }}1')
     div.picture
     div.kind {{ card.kind }}
     div.rarity {{ card.rarity }}

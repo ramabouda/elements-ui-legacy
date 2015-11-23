@@ -19,6 +19,7 @@ angular.module(module.exports.__name__, [
   var baseUrl;
   var fields = [
     'cards',
+    'decks',
     'auth_token',
     'auth_token_refresh',
   ]

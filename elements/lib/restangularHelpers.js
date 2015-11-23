@@ -124,4 +124,6 @@ angular.module(module.exports.__name__, [])
     defaultPaginationTransformer: defaultPaginationTransformer,
     errorInterceptor: errorInterceptor,
   };
-});
+})
+
+

@@ -20,7 +20,7 @@ module.exports = {
   ],
   output: {
     path: 'dist',
-    publicPath: '/',
+    publicPath: '/',  // Prefix for all the statics urls
     filename: 'bundle.js',
   },
   resolve: {
@@ -34,9 +34,12 @@ module.exports = {
         loader: 'babel-loader?presets[]=es2015',
       },
       { test: /\.css$/,  loaders: ['style', 'css'] },
+      // TODO fix css source maps (add 'css?sourceMaps') breaking url attribute
       { test: /\.scss$/, loaders: ['style', 'css?sourceMap', 'sass?sourceMap'] },
       { test: /\.sass$/, loaders: ['style', 'css?sourceMap', 'sass?sourceMap&indentedSyntax=true'] },
       { test: /\.jade$/, loaders: ['ngtemplate', 'html', 'jade-html'] },
+      { test: /\.(png|gif|jp(e)?g)$/, loader: 'url-loader?limit=8192' },
+      { test: /\.(ttf|eot|svg|woff(2))(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=50000' },
     ],
   },
   plugins: [
@@ -49,11 +52,15 @@ module.exports = {
     new webpack.ProvidePlugin({
       '_': 'lodash',
       '$': 'jquery',
-      // gotcha: have the global variable 'angular' in your code if you require a template
+      // gotcha with the global, use the variable 'angular' in your code if you require a template
+      // gotcha2: global angular does not even work!?
       // 'angular': 'angular',
     }),
   ],
   sassLoader: {
-    includePaths: [path.resolve(__dirname, './elements/')],
+    // paths for @import declarations
+    includePaths: [
+      path.resolve(__dirname, './elements/'),
+    ],
   },
 };

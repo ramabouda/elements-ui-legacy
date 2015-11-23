@@ -1,7 +1,7 @@
 @import maps
 
 
-$default-text-color: #1F1F1F
+$default_text_color: #1F1F1F
 
 @each $_name, $_value in $element_colors
   .#{$_name}_bg
@@ -12,5 +12,5 @@ $default-text-color: #1F1F1F
     border-color: darken($_value, 10%)
 
 .AIR_bg
-  color: $default-text-color
+  color: $default_text_color
 

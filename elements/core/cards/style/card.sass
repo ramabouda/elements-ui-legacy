@@ -2,16 +2,12 @@
 @import core/common/style/maps
 
 
-body
-  background: lightgrey
-
 $card_border_radius: 12px
 
 .card
   background: black
   width: 230px
   height: 300px
-  color: white
   display: inline-block
   position: relative
   z-index: 10
@@ -25,7 +21,7 @@ $card_border_radius: 12px
     &.#{$_name}
       @extend .#{$_name}_bg
       @extend .#{$_name}_border
-      box-shadow: 0 0 10px rgba($_value, 0.5)
+      box-shadow: 0 0 10px rgba(black, 0.5)
 
   & > div
     background: lightgrey

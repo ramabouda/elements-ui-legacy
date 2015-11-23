@@ -2,11 +2,13 @@ import angular from 'angular'
 import uirouter from 'angular-ui-router'
 import ngCookies from 'angular-cookies'
 
-import commonCss from 'elements/core/common/style/common.sass'
+require('elements/core/common/style/common.sass')
+
 
 angular.module('elements', [
   require('elements/api').__name__,
   require('elements/core/cards/cardlist').__name__,
+  require('elements/core/decks').__name__,
   require('elements/core/login').__name__,
   uirouter,
   ngCookies,
