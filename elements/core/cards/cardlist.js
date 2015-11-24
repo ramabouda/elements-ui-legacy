@@ -3,8 +3,8 @@ module.exports = { __name__: 'cards' };
 import angular from 'angular'
 import uirouter from 'angular-ui-router'
 
-import cardCss from './style/card.sass'
-import cardListCss from './style/cardlist.sass'
+import './style/card.sass'
+import './style/cardlist.sass'
 
 var template = require('./templates/cardlist.jade')
 
