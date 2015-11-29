@@ -23,36 +23,44 @@
 [data-icon]:before { content: attr(data-icon); }
 
 [data-icon]:before,
-.eli-WATER1:before,
+.eli-ACTION:before,
+.eli-AIR:before,
+.eli-ENCHANT:before,
+.eli-EQUIPMENT:before,
+.eli-FIRE:before,
+.eli-INTERCEPT:before,
+.eli-PHYSICAL:before,
+.eli-RARITY:before,
+.eli-SIMPLE:before,
+.eli-WATER:before,
+.eli-action2:before,
+.eli-action3:before,
+.eli-action4:before,
+.eli-air2:before,
+.eli-air3:before,
+.eli-air4:before,
 .eli-blade1:before,
 .eli-blood10:before,
 .eli-burn7:before,
-.eli-cross6:before,
-.eli-electricity23:before,
-.eli-energy28:before,
 .eli-fire:before,
-.eli-flame1:before,
 .eli-flames8:before,
 .eli-helmet1:before,
-.eli-lightning24:before,
 .eli-mountain45:before,
-.eli-power135:before,
+.eli-physical1:before,
+.eli-physical2:before,
 .eli-relax6:before,
 .eli-rock8:before,
 .eli-security48:before,
 .eli-shield3:before,
 .eli-shield33:before,
 .eli-shield84:before,
+.eli-simple2:before,
 .eli-spa16:before,
 .eli-spa21:before,
 .eli-swords8:before,
 .eli-water2:before,
 .eli-water3:before,
-.eli-waves7:before,
 .eli-weapon32:before,
-.eli-wind2:before,
-.eli-winds4:before,
-.eli-windy9:before,
 .eli-zen2:before,
 .eli-zen3:before {
   display: inline-block;
@@ -69,68 +77,84 @@
   font-smoothing: antialiased;
 }
 
-.eli-WATER1:before { content: "\f123"; }
+.eli-ACTION:before { content: "\f12c"; }
+.eli-AIR:before { content: "\f126"; }
+.eli-ENCHANT:before { content: "\f12d"; }
+.eli-EQUIPMENT:before { content: "\f12e"; }
+.eli-FIRE:before { content: "\f124"; }
+.eli-INTERCEPT:before { content: "\f12f"; }
+.eli-PHYSICAL:before { content: "\f133"; }
+.eli-RARITY:before { content: "\f134"; }
+.eli-SIMPLE:before { content: "\f129"; }
+.eli-WATER:before { content: "\f125"; }
+.eli-action2:before { content: "\f130"; }
+.eli-action3:before { content: "\f131"; }
+.eli-action4:before { content: "\f132"; }
+.eli-air2:before { content: "\f127"; }
+.eli-air3:before { content: "\f128"; }
+.eli-air4:before { content: "\f12a"; }
 .eli-blade1:before { content: "\f100"; }
 .eli-blood10:before { content: "\f101"; }
 .eli-burn7:before { content: "\f102"; }
-.eli-cross6:before { content: "\f103"; }
-.eli-electricity23:before { content: "\f105"; }
-.eli-energy28:before { content: "\f106"; }
 .eli-fire:before { content: "\f107"; }
-.eli-flame1:before { content: "\f108"; }
 .eli-flames8:before { content: "\f109"; }
 .eli-helmet1:before { content: "\f10a"; }
-.eli-lightning24:before { content: "\f10b"; }
 .eli-mountain45:before { content: "\f10c"; }
-.eli-power135:before { content: "\f10d"; }
+.eli-physical1:before { content: "\f135"; }
+.eli-physical2:before { content: "\f136"; }
 .eli-relax6:before { content: "\f10e"; }
 .eli-rock8:before { content: "\f10f"; }
 .eli-security48:before { content: "\f110"; }
 .eli-shield3:before { content: "\f111"; }
 .eli-shield33:before { content: "\f112"; }
 .eli-shield84:before { content: "\f113"; }
+.eli-simple2:before { content: "\f12b"; }
 .eli-spa16:before { content: "\f114"; }
 .eli-spa21:before { content: "\f115"; }
 .eli-swords8:before { content: "\f116"; }
 .eli-water2:before { content: "\f121"; }
 .eli-water3:before { content: "\f122"; }
-.eli-waves7:before { content: "\f119"; }
 .eli-weapon32:before { content: "\f11a"; }
-.eli-wind2:before { content: "\f11b"; }
-.eli-winds4:before { content: "\f11c"; }
-.eli-windy9:before { content: "\f11d"; }
 .eli-zen2:before { content: "\f11e"; }
 .eli-zen3:before { content: "\f11f"; }
 
-$font-elements-icons-WATER1: "\f123";
+$font-elements-icons-ACTION: "\f12c";
+$font-elements-icons-AIR: "\f126";
+$font-elements-icons-ENCHANT: "\f12d";
+$font-elements-icons-EQUIPMENT: "\f12e";
+$font-elements-icons-FIRE: "\f124";
+$font-elements-icons-INTERCEPT: "\f12f";
+$font-elements-icons-PHYSICAL: "\f133";
+$font-elements-icons-RARITY: "\f134";
+$font-elements-icons-SIMPLE: "\f129";
+$font-elements-icons-WATER: "\f125";
+$font-elements-icons-action2: "\f130";
+$font-elements-icons-action3: "\f131";
+$font-elements-icons-action4: "\f132";
+$font-elements-icons-air2: "\f127";
+$font-elements-icons-air3: "\f128";
+$font-elements-icons-air4: "\f12a";
 $font-elements-icons-blade1: "\f100";
 $font-elements-icons-blood10: "\f101";
 $font-elements-icons-burn7: "\f102";
-$font-elements-icons-cross6: "\f103";
-$font-elements-icons-electricity23: "\f105";
-$font-elements-icons-energy28: "\f106";
 $font-elements-icons-fire: "\f107";
-$font-elements-icons-flame1: "\f108";
 $font-elements-icons-flames8: "\f109";
 $font-elements-icons-helmet1: "\f10a";
-$font-elements-icons-lightning24: "\f10b";
 $font-elements-icons-mountain45: "\f10c";
-$font-elements-icons-power135: "\f10d";
+$font-elements-icons-physical1: "\f135";
+$font-elements-icons-physical2: "\f136";
 $font-elements-icons-relax6: "\f10e";
 $font-elements-icons-rock8: "\f10f";
 $font-elements-icons-security48: "\f110";
 $font-elements-icons-shield3: "\f111";
 $font-elements-icons-shield33: "\f112";
 $font-elements-icons-shield84: "\f113";
+$font-elements-icons-simple2: "\f12b";
 $font-elements-icons-spa16: "\f114";
 $font-elements-icons-spa21: "\f115";
 $font-elements-icons-swords8: "\f116";
 $font-elements-icons-water2: "\f121";
 $font-elements-icons-water3: "\f122";
-$font-elements-icons-waves7: "\f119";
 $font-elements-icons-weapon32: "\f11a";
-$font-elements-icons-wind2: "\f11b";
-$font-elements-icons-winds4: "\f11c";
-$font-elements-icons-windy9: "\f11d";
 $font-elements-icons-zen2: "\f11e";
 $font-elements-icons-zen3: "\f11f";

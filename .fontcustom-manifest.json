@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "469bd11991f6ad7f7442d5e3d0890e5d030462b33b9198a25bafee4a23928d6c",
-    "current": "469bd11991f6ad7f7442d5e3d0890e5d030462b33b9198a25bafee4a23928d6c"
+    "previous": "9d243be31aaa57f946a40358cf1c2026f90ea271ce719868f05e9acd7c0b4a0b",
+    "current": "9d243be31aaa57f946a40358cf1c2026f90ea271ce719868f05e9acd7c0b4a0b"
   },
   "fonts": [
     "elements/assets/fonts/elements-icons.ttf",
@@ -10,9 +10,69 @@
     "elements/assets/fonts/elements-icons.eot"
   ],
   "glyphs": {
-    "WATER1": {
-      "codepoint": 61731,
-      "source": "elements/assets/fonts/icons/WATER1.svg"
+    "ACTION": {
+      "codepoint": 61740,
+      "source": "elements/assets/fonts/icons/ACTION.svg"
+    },
+    "AIR": {
+      "codepoint": 61734,
+      "source": "elements/assets/fonts/icons/AIR.svg"
+    },
+    "ENCHANT": {
+      "codepoint": 61741,
+      "source": "elements/assets/fonts/icons/ENCHANT.svg"
+    },
+    "EQUIPMENT": {
+      "codepoint": 61742,
+      "source": "elements/assets/fonts/icons/EQUIPMENT.svg"
+    },
+    "FIRE": {
+      "codepoint": 61732,
+      "source": "elements/assets/fonts/icons/FIRE.svg"
+    },
+    "INTERCEPT": {
+      "codepoint": 61743,
+      "source": "elements/assets/fonts/icons/INTERCEPT.svg"
+    },
+    "PHYSICAL": {
+      "codepoint": 61747,
+      "source": "elements/assets/fonts/icons/PHYSICAL.svg"
+    },
+    "RARITY": {
+      "codepoint": 61748,
+      "source": "elements/assets/fonts/icons/RARITY.svg"
+    },
+    "SIMPLE": {
+      "codepoint": 61737,
+      "source": "elements/assets/fonts/icons/SIMPLE.svg"
+    },
+    "WATER": {
+      "codepoint": 61733,
+      "source": "elements/assets/fonts/icons/WATER.svg"
+    },
+    "action2": {
+      "codepoint": 61744,
+      "source": "elements/assets/fonts/icons/action2.svg"
+    },
+    "action3": {
+      "codepoint": 61745,
+      "source": "elements/assets/fonts/icons/action3.svg"
+    },
+    "action4": {
+      "codepoint": 61746,
+      "source": "elements/assets/fonts/icons/action4.svg"
+    },
+    "air2": {
+      "codepoint": 61735,
+      "source": "elements/assets/fonts/icons/air2.svg"
+    },
+    "air3": {
+      "codepoint": 61736,
+      "source": "elements/assets/fonts/icons/air3.svg"
+    },
+    "air4": {
+      "codepoint": 61738,
+      "source": "elements/assets/fonts/icons/air4.svg"
     },
     "blade1": {
       "codepoint": 61696,
@@ -26,25 +86,9 @@
       "codepoint": 61698,
       "source": "elements/assets/fonts/icons/burn7.svg"
     },
-    "cross6": {
-      "codepoint": 61699,
-      "source": "elements/assets/fonts/icons/cross6.svg"
-    },
-    "electricity23": {
-      "codepoint": 61701,
-      "source": "elements/assets/fonts/icons/electricity23.svg"
-    },
-    "energy28": {
-      "codepoint": 61702,
-      "source": "elements/assets/fonts/icons/energy28.svg"
-    },
     "fire": {
       "codepoint": 61703,
       "source": "elements/assets/fonts/icons/fire.svg"
-    },
-    "flame1": {
-      "codepoint": 61704,
-      "source": "elements/assets/fonts/icons/flame1.svg"
     },
     "flames8": {
       "codepoint": 61705,
@@ -54,17 +98,17 @@
       "codepoint": 61706,
       "source": "elements/assets/fonts/icons/helmet1.svg"
     },
-    "lightning24": {
-      "codepoint": 61707,
-      "source": "elements/assets/fonts/icons/lightning24.svg"
-    },
     "mountain45": {
       "codepoint": 61708,
       "source": "elements/assets/fonts/icons/mountain45.svg"
     },
-    "power135": {
-      "codepoint": 61709,
-      "source": "elements/assets/fonts/icons/power135.svg"
+    "physical1": {
+      "codepoint": 61749,
+      "source": "elements/assets/fonts/icons/physical1.svg"
+    },
+    "physical2": {
+      "codepoint": 61750,
+      "source": "elements/assets/fonts/icons/physical2.svg"
     },
     "relax6": {
       "codepoint": 61710,
@@ -90,6 +134,10 @@
       "codepoint": 61715,
       "source": "elements/assets/fonts/icons/shield84.svg"
     },
+    "simple2": {
+      "codepoint": 61739,
+      "source": "elements/assets/fonts/icons/simple2.svg"
+    },
     "spa16": {
       "codepoint": 61716,
       "source": "elements/assets/fonts/icons/spa16.svg"
@@ -110,25 +158,9 @@
       "codepoint": 61730,
       "source": "elements/assets/fonts/icons/water3.svg"
     },
-    "waves7": {
-      "codepoint": 61721,
-      "source": "elements/assets/fonts/icons/waves7.svg"
-    },
     "weapon32": {
       "codepoint": 61722,
       "source": "elements/assets/fonts/icons/weapon32.svg"
-    },
-    "wind2": {
-      "codepoint": 61723,
-      "source": "elements/assets/fonts/icons/wind2.svg"
-    },
-    "winds4": {
-      "codepoint": 61724,
-      "source": "elements/assets/fonts/icons/winds4.svg"
-    },
-    "windy9": {
-      "codepoint": 61725,
-      "source": "elements/assets/fonts/icons/windy9.svg"
     },
     "zen2": {
       "codepoint": 61726,

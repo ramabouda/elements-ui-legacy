@@ -4,5 +4,14 @@ $element_colors: (
   'EARTH': green,
   'AIR': white,
   'PHYSICAL': black,
-  'SIMPLE': lightgrey
+  'SIMPLE': darkgrey
 );
+
+$card-rarities: (
+  'COMMON': lightgrey,
+  'UNUSUAL': yellow,
+  'RARE': #FFA61A,
+  'MYTHICAL': red,
+);
+
+$card-kinds: EQUIPMENT INTERCEPT ENCHANT ACTION;

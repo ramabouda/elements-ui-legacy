@@ -7,9 +7,12 @@ div.cardlist
   )
     div.name {{ card.name }}
     div.cost
-      span(ng-repeat='cost in card.cost') {{ cost.quantity }}
-        i(class='eli-{{ cost.energy }}1')
+      div.cost-energy(class='energy-{{ cost.energy }}' ng-repeat='cost in card.cost')
+        span.cost-quantity {{ cost.quantity }}
+        i(class='icon {{ cost.energy }}_bg')
     div.picture
-    div.kind {{ card.kind }}
-    div.rarity {{ card.rarity }}
+    div.kind(class='kind-{{ card.kind }}')
+      i(class='icon' title='{{ card.kind }}')
+    div.rarity(class='rarity-{{ card.rarity }}')
+      i(class='icon' title='{{ card.rarity }}')
     div.text blah blah blah blah blah blah dfqsef qsf qsef  sqfqs eq

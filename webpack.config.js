@@ -3,6 +3,7 @@ var path = require('path');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var autoprefixer = require('autoprefixer');
 
 
 var devFlagPlugin = new webpack.DefinePlugin({
@@ -32,10 +33,10 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader?presets[]=es2015',
       },
-      { test: /\.css$/,  loaders: ['style', 'css'] },
+      { test: /\.css$/,  loaders: ['style', 'css', 'postcss-loader'] },
       // TODO fix css source maps (add 'css?sourceMaps') breaking url attribute
-      { test: /\.scss$/, loaders: ['style', 'css?sourceMap', 'sass?sourceMap'] },
-      { test: /\.sass$/, loaders: ['style', 'css?sourceMap', 'sass?sourceMap&indentedSyntax=true'] },
+      { test: /\.scss$/, loaders: ['style', 'css', 'postcss-loader', 'sass?sourceMap'] },
+      { test: /\.sass$/, loaders: ['style', 'css', 'postcss-loader', 'sass?sourceMap&indentedSyntax=true'] },
       { test: /\.jade$/, loaders: ['ngtemplate', 'html', 'jade-html'] },
       { test: /\.(png|gif|jp(e)?g)$/, loader: 'url-loader?limit=8192' },
       { test: /\.(ttf|eot|svg|woff(2))(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=50000' },
@@ -56,4 +57,5 @@ module.exports = {
       // 'angular': 'angular',
     }),
   ],
+  postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
 };
