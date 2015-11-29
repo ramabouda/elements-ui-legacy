@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "9d243be31aaa57f946a40358cf1c2026f90ea271ce719868f05e9acd7c0b4a0b",
-    "current": "9d243be31aaa57f946a40358cf1c2026f90ea271ce719868f05e9acd7c0b4a0b"
+    "previous": "7ca48711b4d0829b121b1def5210d35d2ce425c2d0837d36b0da295045df5eca",
+    "current": "7ca48711b4d0829b121b1def5210d35d2ce425c2d0837d36b0da295045df5eca"
   },
   "fonts": [
     "elements/assets/fonts/elements-icons.ttf",
@@ -109,6 +109,18 @@
     "physical2": {
       "codepoint": 61750,
       "source": "elements/assets/fonts/icons/physical2.svg"
+    },
+    "rarity2": {
+      "codepoint": 61751,
+      "source": "elements/assets/fonts/icons/rarity2.svg"
+    },
+    "rarity4": {
+      "codepoint": 61752,
+      "source": "elements/assets/fonts/icons/rarity4.svg"
+    },
+    "rarity5": {
+      "codepoint": 61753,
+      "source": "elements/assets/fonts/icons/rarity5.svg"
     },
     "relax6": {
       "codepoint": 61710,

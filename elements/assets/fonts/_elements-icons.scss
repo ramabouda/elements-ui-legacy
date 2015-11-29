@@ -48,6 +48,9 @@
 .eli-mountain45:before,
 .eli-physical1:before,
 .eli-physical2:before,
+.eli-rarity2:before,
+.eli-rarity4:before,
+.eli-rarity5:before,
 .eli-relax6:before,
 .eli-rock8:before,
 .eli-security48:before,
@@ -102,6 +105,9 @@
 .eli-mountain45:before { content: "\f10c"; }
 .eli-physical1:before { content: "\f135"; }
 .eli-physical2:before { content: "\f136"; }
+.eli-rarity2:before { content: "\f137"; }
+.eli-rarity4:before { content: "\f138"; }
+.eli-rarity5:before { content: "\f139"; }
 .eli-relax6:before { content: "\f10e"; }
 .eli-rock8:before { content: "\f10f"; }
 .eli-security48:before { content: "\f110"; }
@@ -143,6 +149,9 @@ $font-elements-icons-helmet1: "\f10a";
 $font-elements-icons-mountain45: "\f10c";
 $font-elements-icons-physical1: "\f135";
 $font-elements-icons-physical2: "\f136";
+$font-elements-icons-rarity2: "\f137";
+$font-elements-icons-rarity4: "\f138";
+$font-elements-icons-rarity5: "\f139";
 $font-elements-icons-relax6: "\f10e";
 $font-elements-icons-rock8: "\f10f";
 $font-elements-icons-security48: "\f110";
