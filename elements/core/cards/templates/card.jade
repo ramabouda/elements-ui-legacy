@@ -1,3 +1,20 @@
-div
-  div
-    span test
+.card(
+    data-card-id='{{ card.id }}'
+    class='{{ card.elements.join(" ") }}'
+  )
+  .name
+    .name-inside {{ card.name }}
+  .cost
+    .cost-energy(class='energy-{{ cost.energy }}' ng-repeat='cost in card.cost')
+      span.cost-quantity {{ cost.quantity }}
+      i(class='icon {{ cost.energy }}_bg')
+  .picture
+  .card-bottom
+    .kind(class='kind-{{ card.kind }}')
+      i(class='icon' title='{{ card.kind }}')
+    .rarity(class='rarity-{{ card.rarity }}')
+      i(class='icon' title='{{ card.rarity }}')
+  .text-box
+    .text-inside
+      .text {{ card.text }}
+      .flavor-text {{ card.flavor_text }}

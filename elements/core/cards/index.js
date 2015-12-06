@@ -5,6 +5,7 @@ import angular from 'angular'
 
 import cardListModule from './list'
 
+import cardTemplate from './templates/card.jade'
 import './style/card.sass'
 
 
@@ -12,10 +13,11 @@ angular.module(moduleName, [
   cardListModule,
 ])
 
-.directive('deckCard', function() {
+.directive('gameCard', function() {
   return {
-    restrict: 'AE',
-    replace: 'true',
-    template: '<h3>Hello World!!</h3>',
+    templateUrl: cardTemplate,
+    scope: {
+      card: '=',
+    },
   }
 })
