@@ -1,12 +1,16 @@
-module.exports = { __name__: 'decks' };
+const moduleName = 'decks'
+export default moduleName
 
 import angular from 'angular'
 import uirouter from 'angular-ui-router'
 
-var deckListTemplate = require('./templates/decklist.jade')
+import apiModule from 'elements/api'
 
-angular.module(module.exports.__name__, [
-  require('elements/api').__name__,
+import deckListTemplate from './templates/decklist.jade'
+
+
+angular.module(moduleName, [
+  apiModule,
   uirouter,
 ])
 

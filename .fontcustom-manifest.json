@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "7ca48711b4d0829b121b1def5210d35d2ce425c2d0837d36b0da295045df5eca",
-    "current": "7ca48711b4d0829b121b1def5210d35d2ce425c2d0837d36b0da295045df5eca"
+    "previous": "025fa337965326605ebdeeeaeddc373b1089cdec94f6b29631171be5f3692186",
+    "current": "025fa337965326605ebdeeeaeddc373b1089cdec94f6b29631171be5f3692186"
   },
   "fonts": [
     "elements/assets/fonts/elements-icons.ttf",
@@ -17,6 +17,10 @@
     "AIR": {
       "codepoint": 61734,
       "source": "elements/assets/fonts/icons/AIR.svg"
+    },
+    "EARTH": {
+      "codepoint": 61754,
+      "source": "elements/assets/fonts/icons/EARTH.svg"
     },
     "ENCHANT": {
       "codepoint": 61741,
@@ -97,10 +101,6 @@
     "helmet1": {
       "codepoint": 61706,
       "source": "elements/assets/fonts/icons/helmet1.svg"
-    },
-    "mountain45": {
-      "codepoint": 61708,
-      "source": "elements/assets/fonts/icons/mountain45.svg"
     },
     "physical1": {
       "codepoint": 61749,

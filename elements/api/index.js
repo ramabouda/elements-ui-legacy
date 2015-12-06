@@ -1,15 +1,16 @@
-module.exports = { __name__: 'api' };
+const moduleName = 'api'
+export default moduleName
 
 import angular from 'angular'
 import restangular from 'restangular' /* eslint no-unused-vars: 0 */
 
 import settings from 'elements/settings'
+import restHelpersModule from 'elements/lib/restangularHelpers'
 
 
-angular.module(module.exports.__name__, [
+angular.module(moduleName, [
   'restangular',
-  require('elements/lib/restangularHelpers').__name__,
-  require('elements/core/login').__name__,
+  restHelpersModule,
 ])
 
 

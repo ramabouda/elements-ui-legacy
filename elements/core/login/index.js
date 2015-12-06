@@ -1,14 +1,18 @@
+const moduleName = 'login'
+export default moduleName
+
 import angular from 'angular'
 import uirouter from 'angular-ui-router'
 
 import jwtDecode from 'jwt-decode'
 
+import apiModule from 'elements/api'
+
 import loginTemplate from './templates/login.jade'
 
-module.exports = { __name__: 'login' };
 
-angular.module(module.exports.__name__, [
-  require('elements/api').__name__,
+angular.module(moduleName, [
+  apiModule,
   uirouter,
 ])
 

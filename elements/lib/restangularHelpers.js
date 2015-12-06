@@ -1,9 +1,11 @@
-module.exports = { __name__: 'lib.angular-rest-helpers' };
+const moduleName = 'rest_helpers'
+export default moduleName
 
-var angular = require('angular');
-var queryString = require('query-string');
+import angular from 'angular'
+import queryString from 'query-string'
 
-angular.module(module.exports.__name__, [])
+
+angular.module(moduleName, [])
 
 .constant('HttpStatus', {
   OK: 200,

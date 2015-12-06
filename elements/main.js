@@ -2,16 +2,26 @@ import angular from 'angular'
 import uirouter from 'angular-ui-router'
 import ngCookies from 'angular-cookies'
 
-require('elements/core/common/style/common.sass')
+import apiModule from 'elements/api'
+import cardsModule from 'elements/core/cards'
+import decksModule from 'elements/core/decks'
+import loginModule from 'elements/core/login'
+
+import 'elements/core/common/style/common.sass'
 
 
 angular.module('elements', [
-  require('elements/api').__name__,
-  require('elements/core/cards/cardlist').__name__,
-  require('elements/core/decks').__name__,
-  require('elements/core/login').__name__,
+  // libs
   uirouter,
   ngCookies,
+
+  // custom libs
+  apiModule,
+
+  // app
+  cardsModule,
+  decksModule,
+  loginModule,
 ])
 
 .config(function($stateProvider, $urlRouterProvider){
