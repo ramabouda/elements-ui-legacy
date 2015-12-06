@@ -25,6 +25,7 @@
 [data-icon]:before,
 .eli-ACTION:before,
 .eli-AIR:before,
+.eli-EARTH:before,
 .eli-ENCHANT:before,
 .eli-EQUIPMENT:before,
 .eli-FIRE:before,
@@ -45,7 +46,6 @@
 .eli-fire:before,
 .eli-flames8:before,
 .eli-helmet1:before,
-.eli-mountain45:before,
 .eli-physical1:before,
 .eli-physical2:before,
 .eli-rarity2:before,
@@ -82,6 +82,7 @@
 
 .eli-ACTION:before { content: "\f12c"; }
 .eli-AIR:before { content: "\f126"; }
+.eli-EARTH:before { content: "\f13a"; }
 .eli-ENCHANT:before { content: "\f12d"; }
 .eli-EQUIPMENT:before { content: "\f12e"; }
 .eli-FIRE:before { content: "\f124"; }
@@ -102,7 +103,6 @@
 .eli-fire:before { content: "\f107"; }
 .eli-flames8:before { content: "\f109"; }
 .eli-helmet1:before { content: "\f10a"; }
-.eli-mountain45:before { content: "\f10c"; }
 .eli-physical1:before { content: "\f135"; }
 .eli-physical2:before { content: "\f136"; }
 .eli-rarity2:before { content: "\f137"; }
@@ -126,6 +126,7 @@
 
 $font-elements-icons-ACTION: "\f12c";
 $font-elements-icons-AIR: "\f126";
+$font-elements-icons-EARTH: "\f13a";
 $font-elements-icons-ENCHANT: "\f12d";
 $font-elements-icons-EQUIPMENT: "\f12e";
 $font-elements-icons-FIRE: "\f124";
@@ -146,7 +147,6 @@ $font-elements-icons-burn7: "\f102";
 $font-elements-icons-fire: "\f107";
 $font-elements-icons-flames8: "\f109";
 $font-elements-icons-helmet1: "\f10a";
-$font-elements-icons-mountain45: "\f10c";
 $font-elements-icons-physical1: "\f135";
 $font-elements-icons-physical2: "\f136";
 $font-elements-icons-rarity2: "\f137";
