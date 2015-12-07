@@ -19,7 +19,7 @@ angular.module(moduleName, [
 
 .config(function($stateProvider){
   $stateProvider
-    .state('cardlist', {
+    .state('library.cardlist', {
       url: '/cards',
       templateUrl: template,
       controller: 'CardListCtrl',

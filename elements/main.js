@@ -9,6 +9,9 @@ import loginModule from 'elements/core/login'
 
 import 'elements/core/common/style/common.sass'
 
+import menuTemplate from 'elements/core/common/templates/menu.jade'
+import libraryTemplate from 'elements/core/common/templates/library.jade'
+
 
 angular.module('elements', [
   // libs
@@ -25,10 +28,23 @@ angular.module('elements', [
 ])
 
 .config(function($stateProvider, $urlRouterProvider){
+  $stateProvider
+    .state('library', {
+      abstract: true,
+      url: '',
+      views: {
+        '': {
+          templateUrl: libraryTemplate,
+        },
+        'menu@library': {
+          templateUrl: menuTemplate,
+        },
+      },
+    })
 
   $urlRouterProvider
-    .when('/', 'cards')
-    .when('', 'cards')
+    .when('/', '/cards')
+    .when('', '/cards')
     .otherwise('/notFound')
 
 })
