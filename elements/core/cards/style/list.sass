@@ -1,5 +1,32 @@
+@import 'card'
+
 .cardlist
   display: flex
   flex-wrap: wrap
   .card
     margin: 10px
+
+.cards-column
+  position: relative
+  width: $card_width_total + $card_shadow_size * 2
+  & > *
+    z-index: 1
+    position: absolute
+    left: $card_shadow_size
+    @for $i from 1 through 40
+      &:nth-child(#{$i})
+        top: ($i - 1) * 40px
+    &:hover
+      z-index: 2
+  .card
+    box-shadow: 0 0 5px rgba(black, 0.3)
+    &:hover
+      box-shadow: 0 0 10px rgba(black, 0.6)
+
+.deck-cards
+  background: #BDBDCB
+  display: flex
+  .cards-column
+    height: 500px
+    overflow: auto
+

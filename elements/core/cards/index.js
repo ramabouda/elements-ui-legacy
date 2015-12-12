@@ -13,6 +13,7 @@ angular.module(moduleName, [
   cardListModule,
 ])
 
+
 .directive('gameCard', function() {
   return {
     templateUrl: cardTemplate,
