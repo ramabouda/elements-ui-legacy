@@ -4,17 +4,20 @@ form(name='createDeckForm')
   input(placeholder='Deck name' type='text' ng-model='deck.name' required)
   input(type='submit' ng-click='validate()')
 
-
-  .cardlist
-    game-card(
-      ng-repeat='card in cards track by card.id'
-      card='card'
-    )
-
   p Cards
   .deck-cards
     .cards-column
       game-card(
-        ng-repeat='card in deck.cards track by card.id'
+        ng-repeat='card in deck.cards'
         card='cardsbyId[card.id]'
+        context='deck_creation'
       )
+
+h2 Library
+
+.cardlist
+  game-card(
+    ng-repeat='card in cards track by card.id'
+    card='card'
+    context='library'
+  )

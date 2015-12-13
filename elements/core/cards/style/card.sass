@@ -18,6 +18,7 @@ $card_height: 300px
 $card_shadow_size: 10px
 
 .card
+  @extend .noselect
   width: $card_width
   height: $card_height
   display: inline-block
@@ -27,6 +28,10 @@ $card_shadow_size: 10px
   border-radius: $card_border_radius
   box-shadow: 0 0 $card_shadow_size rgba(black, 0.5)
   overflow: hidden
+  cursor: pointer
+
+  &:hover
+    box-shadow: 0 0 $card_shadow_size * 2 rgba(white, 0.8)
 
   // Color background
   @each $_name, $_value in $element_colors

@@ -61,10 +61,13 @@ angular.module(moduleName, [
 })
 
 
-.controller('DeckCreateCtrl', function($scope, $stateParams, Api, resDecks, resCards){
+.controller('DeckCreateCtrl', function(
+  $rootScope, $scope, $stateParams,
+  Api, resDecks, resCards
+){
   $scope.deck = {
     name: '',
-    cards: {},
+    cards: [],
   }
   if ($stateParams.deckId !== undefined) {
     $scope.deck = resDecks.filter(deck => deck.id === parseInt($stateParams.deckId, 10))[0]
@@ -75,6 +78,25 @@ angular.module(moduleName, [
   _.each(resCards, function(card){
     $scope.cardsbyId[card.id] = card
   })
+
+  $rootScope.$on('card.click', (event, cardScope) =>
+    $scope.$apply(() => {
+      let cardEntry = _.find($scope.deck.cards, {id: cardScope.card.id})
+      if (cardScope.context === 'library'){
+        if (!cardEntry){
+          cardEntry = {
+            quantity: 0,
+            id: cardScope.card.id,
+          }
+          $scope.deck.cards.push(cardEntry)
+        }
+        cardEntry.quantity += 1
+      } else if (cardScope.context === 'deck_creation'){
+        cardEntry.quantity -= 1
+        $scope.deck.cards = $scope.deck.cards.filter((deckCard) => deckCard.quantity !== 0)
+      }
+    })
+  )
 
   $scope.validate = function(){
     if ($scope.createDeckForm.$valid) {

@@ -14,11 +14,15 @@ angular.module(moduleName, [
 ])
 
 
-.directive('gameCard', function() {
+.directive('gameCard', function($rootScope) {
   return {
     templateUrl: cardTemplate,
     scope: {
       card: '=',
+      context: '@',
+    },
+    link: function(scope, element) {
+      element.on('click', () => $rootScope.$broadcast('card.click', scope))
     },
   }
 })
