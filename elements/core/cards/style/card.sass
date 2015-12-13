@@ -15,6 +15,7 @@ $card_border_width: 2px
 $card_width: 220px
 $card_width_total: 220px + $card_border_width * 2
 $card_height: 300px
+$card_height_small: 45px
 $card_shadow_size: 10px
 
 gamecard
@@ -82,7 +83,6 @@ gamecard
   .name
     z-index: 10
     width: 80%
-    border-radius: $card_border_radius 0 0 0
     background: rgba(white, 0.6)
     font-weight: bold
     height: $card_title_height
@@ -138,6 +138,35 @@ gamecard
     padding: 0 0 0 3px
     box-shadow: 0 0 4px rgba(0,0,0, 0.8)
 
+
+.card.small
+  height: $card_height_small
+  border-radius: 5px
+  .name
+    height: 100%
+    background: none
+    .name-inside
+      height: 100%
+      line-height: $card_height_small
+      vertical-align: middle
+      padding: 0 0 0 5px
+  .cost
+    height: 100%
+    width: 100%
+    font-size: 0.7em
+    border-radius: 0
+    box-shadow: none;
+    background: none;
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    align-items: flex-end;
+    justify-content: center
+    .cost-energy
+      display: inline-block
+      border-radius: 4px
+      margin: 1px 2px
+      box-shadow: 0 0 6px rgba(0,0,0, 0.8)
 
 
 .cost-energy

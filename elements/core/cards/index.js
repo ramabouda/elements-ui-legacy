@@ -6,6 +6,7 @@ import angular from 'angular'
 import cardListModule from './list'
 
 import cardTemplate from './templates/card.jade'
+import cardSmallTemplate from './templates/card_small.jade'
 import './style/card.sass'
 
 
@@ -16,7 +17,9 @@ angular.module(moduleName, [
 
 .directive('gamecard', function($rootScope) {
   return {
-    templateUrl: cardTemplate,
+    templateUrl: function(element, attrs) {
+      return attrs.size === 'small' ? cardSmallTemplate : cardTemplate
+    },
     scope: {
       card: '=',
       context: '@',

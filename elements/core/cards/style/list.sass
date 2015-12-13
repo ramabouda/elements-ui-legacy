@@ -9,15 +9,6 @@
 .cards-column
   position: relative
   width: $card_width_total + $card_shadow_size * 2
-  gamecard
-    z-index: 1
-    position: absolute
-    left: $card_shadow_size
-    @for $i from 1 through 40
-      &:nth-child(#{$i})
-        top: ($i - 1) * 40px
-    &:hover
-      z-index: 2
 
 .deck-cards
   background: #BDBDCB

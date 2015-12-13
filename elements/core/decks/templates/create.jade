@@ -7,11 +7,13 @@ form(name='createDeckForm')
   p Cards
   .deck-cards
     .cards-column
-      gamecard(
-        ng-repeat='card in deck.cards'
-        card='cardsbyId[card.id]'
-        context='deck_creation'
-      )
+      div(ng-repeat='card in deck.cards track by card.id')
+        p {{card.quantity}}
+        gamecard(
+          card='cardsbyId[card.id]'
+          context='deck_creation'
+          size='small'
+        )
 
 h2 Library
 

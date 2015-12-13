@@ -1,0 +1,10 @@
+.card(
+    data-card-id='{{ card.id }}'
+    class='{{ card.elements.join(" ") }} small'
+  )
+  .name
+    .name-inside {{ card.name }}
+  .cost
+    .cost-energy(class='energy-{{ cost.energy }}' ng-repeat='cost in card.cost')
+      span.cost-quantity {{ cost.quantity }}
+      i(class='icon {{ cost.energy }}_bg')
