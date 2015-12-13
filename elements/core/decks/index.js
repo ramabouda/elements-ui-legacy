@@ -5,6 +5,8 @@ import angular from 'angular'
 import uirouter from 'angular-ui-router'
 import uiboostrap from 'angular-ui-bootstrap'
 
+import animationHelpersModule from 'elements/lib/animationHelpers'
+
 import apiModule from 'elements/api'
 import cardsModule from 'elements/core/cards'
 
@@ -13,6 +15,7 @@ import createDeckTemplate from './templates/create.jade'
 
 
 angular.module(moduleName, [
+  animationHelpersModule,
   apiModule,
   cardsModule,
   uirouter,
@@ -63,7 +66,7 @@ angular.module(moduleName, [
 
 .controller('DeckCreateCtrl', function(
   $rootScope, $scope, $stateParams,
-  Api, resDecks, resCards
+  AnimationHelpers, Api, resDecks, resCards
 ){
   $scope.deck = {
     name: '',
@@ -79,24 +82,40 @@ angular.module(moduleName, [
     $scope.cardsbyId[card.id] = card
   })
 
-  $rootScope.$on('card.click', (event, cardScope) =>
-    $scope.$apply(() => {
-      let cardEntry = _.find($scope.deck.cards, {id: cardScope.card.id})
-      if (cardScope.context === 'library'){
-        if (!cardEntry){
-          cardEntry = {
-            quantity: 0,
-            id: cardScope.card.id,
-          }
-          $scope.deck.cards.push(cardEntry)
-        }
-        cardEntry.quantity += 1
-      } else if (cardScope.context === 'deck_creation'){
-        cardEntry.quantity -= 1
-        $scope.deck.cards = $scope.deck.cards.filter((deckCard) => deckCard.quantity !== 0)
+  function removeDeckCard(cardScope) {
+    let cardEntry = _.find($scope.deck.cards, {id: cardScope.card.id})
+    cardEntry.quantity -= 1
+    if (cardEntry.quantity <= 0) {
+      AnimationHelpers.addCleanAnimation(
+        cardScope.element,
+        'fadeOut selected',
+        () => $scope.$apply(() => {
+          $scope.deck.cards = $scope.deck.cards.filter((deckCard) => deckCard.quantity > 0)
+        })
+      )
+    }
+  }
+
+  function addDeckCard(cardScope){
+    let cardEntry = _.find($scope.deck.cards, {id: cardScope.card.id})
+    if (!cardEntry){
+      cardEntry = {
+        quantity: 0,
+        id: cardScope.card.id,
       }
-    })
-  )
+      $scope.deck.cards.push(cardEntry)
+    }
+    cardEntry.quantity += 1
+    AnimationHelpers.addCleanAnimation(cardScope.element, 'fadeOutUp selected')
+  }
+
+  $rootScope.$on('card.click', (event, cardScope) => $scope.$apply(() => {
+    if (cardScope.context === 'library'){
+      addDeckCard(cardScope)
+    } else if (cardScope.context === 'deck_creation'){
+      removeDeckCard(cardScope)
+    }
+  }))
 
   $scope.validate = function(){
     if ($scope.createDeckForm.$valid) {

@@ -7,7 +7,7 @@ form(name='createDeckForm')
   p Cards
   .deck-cards
     .cards-column
-      game-card(
+      gamecard(
         ng-repeat='card in deck.cards'
         card='cardsbyId[card.id]'
         context='deck_creation'
@@ -16,7 +16,7 @@ form(name='createDeckForm')
 h2 Library
 
 .cardlist
-  game-card(
+  gamecard(
     ng-repeat='card in cards track by card.id'
     card='card'
     context='library'

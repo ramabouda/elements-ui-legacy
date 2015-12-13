@@ -14,7 +14,7 @@ angular.module(moduleName, [
 ])
 
 
-.directive('gameCard', function($rootScope) {
+.directive('gamecard', function($rootScope) {
   return {
     templateUrl: cardTemplate,
     scope: {
@@ -22,6 +22,7 @@ angular.module(moduleName, [
       context: '@',
     },
     link: function(scope, element) {
+      scope.element = element
       element.on('click', () => $rootScope.$broadcast('card.click', scope))
     },
   }

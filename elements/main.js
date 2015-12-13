@@ -7,6 +7,8 @@ import cardsModule from 'elements/core/cards'
 import decksModule from 'elements/core/decks'
 import loginModule from 'elements/core/login'
 
+import 'elements/assets/fonts/_elements-icons.scss'
+import 'animate.css/animate.css'
 import 'elements/core/common/style/common.sass'
 
 import menuTemplate from 'elements/core/common/templates/menu.jade'

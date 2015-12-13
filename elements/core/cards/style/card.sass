@@ -17,6 +17,13 @@ $card_width_total: 220px + $card_border_width * 2
 $card_height: 300px
 $card_shadow_size: 10px
 
+gamecard
+  &.animated
+    animation-duration: 0.4s
+  &.selected, &:active
+    .card
+      box-shadow: 0 0 $card_shadow_size * 2 rgba(yellow, 0.8)
+
 .card
   @extend .noselect
   width: $card_width
